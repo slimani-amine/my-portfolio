@@ -6,7 +6,7 @@ WORKDIR /home/app
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install --force
 
 # Builder layer
 FROM node:16-alpine AS builder
