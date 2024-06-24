@@ -30,9 +30,9 @@ const Skills = () => {
                           >
                             <Icon icon={skill.iconifyTag} data-inline="false"></Icon>
                           </div>
-                          <UncontrolledTooltip delay={0} placement="bottom" target={skill.skillName.replace(/\s/g, "")}>
-                            {skill.skillName}
-                          </UncontrolledTooltip>
+                          {/* <UncontrolledTooltip delay={0} placement="bottom" target={skill?.skillName.replace(/\s/g, "")}>
+                            {skill?.skillName}
+                          </UncontrolledTooltip> */}
                         </Fragment>
                       );
                     })}
