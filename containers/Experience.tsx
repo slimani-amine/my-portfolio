@@ -2,12 +2,12 @@ import React from "react";
 import { experience } from "../portfolio";
 import { Container, Row } from "reactstrap";
 import ExperienceCard from "../components/ExperienceCard";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
     experience && (
-      <Fade bottom duration={2000}>
+      <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }}>
         <section className="section section-lg">
           <Container>
             <div className="d-flex p-4">
@@ -27,7 +27,7 @@ const Experience = () => {
             </Row>
           </Container>
         </section>
-      </Fade>
+      </motion.div>
     )
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardBody, Badge } from "reactstrap";
 import { EducationType } from "../types/sections";
-import Fade from "react-reveal/Fade";
 
 const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBullets }: EducationType) => {
   return (

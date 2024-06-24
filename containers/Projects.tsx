@@ -2,12 +2,16 @@ import React from "react";
 import { projects } from "../portfolio";
 import { Container, Row } from "reactstrap";
 import ProjectsCard from "../components/ProjectsCard";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     projects && (
-      <Fade bottom duration={2000}>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2 }}
+      >
         <section className="section section-lg">
           <Container>
             <div className="d-flex p-4">
@@ -21,13 +25,13 @@ const Projects = () => {
               </div>
             </div>
             <Row className="row-grid align-items-center">
-              {projects.map((data, i) => {
-                return <ProjectsCard key={i} {...data} />;
-              })}
+              {projects.map((data, i) => (
+                <ProjectsCard key={i} {...data} />
+              ))}
             </Row>
           </Container>
         </section>
-      </Fade>
+      </motion.div>
     )
   );
 };
